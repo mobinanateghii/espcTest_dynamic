@@ -1,0 +1,10 @@
+.body{
+  width: 40em;
+  height:20em;
+  text-align: justify-all ;
+  padding-left: 9em;
+}
+.example-full-width{
+  width:80%;
+  padding-top: 1em;
+}

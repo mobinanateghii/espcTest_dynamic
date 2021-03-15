@@ -1,0 +1,28 @@
+.mat-primary {
+  color: #3c4553;
+
+}
+mat-sidenav-container{
+  width: 100%;
+  height: 80em;
+}
+mat-sidenav,mat-sidenav-contant{
+  padding: 10px;
+}
+mat-sidenav{
+  height: 100em;
+  width: 20.5em;
+  background-color: #2d323e;
+  color: #757b85;
+
+}
+
+mat-nav-list a{
+  color: #e4e4e6;
+  font-size: 11pt;
+  padding-bottom: 3em;
+}
+li{
+  margin:.5em 0em;
+}
+

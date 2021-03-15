@@ -1,0 +1,79 @@
+<mat-form-field >
+  <label>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </label>
+</mat-form-field>
+
+<div class="mat-elevation-z8 pic">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Form Key Column -->
+    <ng-container matColumnDef="Form_key">
+      <th mat-header-cell *matHeaderCellDef> Form Key</th>
+      <td mat-cell *matCellDef="let element"> {{element.Form_key}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!--  Service Provider Column -->
+    <ng-container matColumnDef="Service_Provider">
+      <th mat-header-cell *matHeaderCellDef> Service Provider </th>
+      <td mat-cell *matCellDef="let element"> {{element.Service_Provider}} </td>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="Description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+<div class="body">
+  <form class="example-form" [formGroup]="CreatPayForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Form key</mat-label>
+      <label>
+        <input matInput placeholder="Example .key" formControlName="Form_key" required>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <label>
+        <input matInput  placeholder="Ex. example" formControlName="name" required>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Service Provider</mat-label>
+      <label>
+        <input matInput [matAutocomplete]="auto" placeholder="mellat bank" formControlName="Service_Provider" required>
+        <mat-autocomplete #auto='matAutocomplete'>
+          <mat-option *ngFor="let option of ServiceProviderNames" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <label>
+        <input matInput  type="text" formControlName="Description" >
+      </label>
+    </mat-form-field>
+
+
+    <button [disabled]="!CreatPayForm.valid"  type="submit" (click)="CreatPayment()" mat-raised-button color="success" >Creat Payment Form</button>
+  </form>
+</div>

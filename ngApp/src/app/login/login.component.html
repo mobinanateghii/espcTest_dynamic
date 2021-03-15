@@ -1,0 +1,36 @@
+<div class="row pt-5">
+  <div class="col col-lg-6 mx-auto">
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">Login</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="LoginForm" (ngSubmit)="loginUser()">
+
+          <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <label>
+                <input matInput type="email" placeholder="Ex. pat@example.com" formControlName="email">
+              </label>
+              <mat-error>Email is required</mat-error>
+          </mat-form-field>
+              <mat-form-field class="example-full-width ">
+                <mat-label>Password</mat-label>
+                <label>
+                  <input matInput type="password" formControlName="password">
+                </label>
+                <mat-error>password is required</mat-error>
+                <mat-hint>min 8 characters</mat-hint>
+              </mat-form-field>
+
+          <button mat-button class="float-right" (click)="GotoReg()">Register</button>
+          <button [disabled]="!LoginForm.valid"  type="submit"  mat-raised-button color="success" class="float-right">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

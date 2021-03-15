@@ -1,0 +1,31 @@
+<div class="body">
+  <h1 mat-dialog-title>Edit Payment Data</h1>
+    <mat-dialog-content><b>Form Key is : </b>{{data.Form_key}} </mat-dialog-content>
+    <mat-dialog-content><b>Service Provider is :</b> {{data.Service_Provider}} </mat-dialog-content>
+
+
+  <form [formGroup]="EditPayForm">
+    <mat-dialog-content>
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <label>
+          <input matInput  formControlName="name">
+        </label>
+      </mat-form-field>
+    </mat-dialog-content>
+
+    <mat-dialog-content>
+        <mat-form-field class="example-full-width">
+          <mat-label>Description</mat-label>
+          <label>
+            <input matInput formControlName="Description">
+          </label>
+       </mat-form-field>
+     </mat-dialog-content>
+  </form>
+
+  <mat-dialog-actions>
+      <button mat-raised-button	 [disabled]="!EditPayForm.valid" [mat-dialog-close]="this.EditPayForm.value">keep changes</button>
+    </mat-dialog-actions>
+
+</div>

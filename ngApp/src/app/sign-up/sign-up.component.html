@@ -1,0 +1,72 @@
+<!-- <div class="body">
+  <form class="example-form" [formGroup]="SignUpForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Username</mat-label>
+      <label>
+        <input matInput placeholder="Ex .Mobina" formControlName="username" required>
+
+      </label>
+        <mat-error>Username is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <label>
+        <input matInput type="email" placeholder="Ex. pat@example.com" formControlName="email" required>
+      </label>
+      <mat-error>Enter a valid email</mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <label>
+        <input matInput  type="password" formControlName="password">
+      </label>
+      <mat-error>Password is required</mat-error>
+      <mat-hint>min 8 characters</mat-hint>
+
+    </mat-form-field>
+
+    <button [disabled]="!SignUpForm.valid"  type="submit"  mat-raised-button color="success" >Submit</button>
+
+  </form>
+</div> -->
+<div class="row pt-5">
+  <div class="col col-lg-6 mx-auto">
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">Register</h3>
+      </div>
+      <div class="card-body">
+        <form  [formGroup]="SignUpForm" (ngSubmit)="registerUser()">
+          <mat-form-field class="example-full-width">
+              <mat-label>Username</mat-label>
+              <label>
+                <input matInput placeholder="Ex .Mobina" formControlName="username">
+              </label>
+              <mat-error>Username is required</mat-error>
+          </mat-form-field>
+              <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <label>
+                <input matInput type="email" placeholder="Ex. pat@example.com" formControlName="email">
+              </label>
+              <mat-error>Email is required</mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width ">
+              <mat-label>Password</mat-label>
+              <label>
+                <input matInput type="password" formControlName="password">
+              </label>
+              <mat-error>password is required</mat-error>
+              <mat-hint>min 8 characters</mat-hint>
+          </mat-form-field>
+
+          <button [disabled]="!SignUpForm.valid"  type="submit"  mat-raised-button color="success" class="float-right">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

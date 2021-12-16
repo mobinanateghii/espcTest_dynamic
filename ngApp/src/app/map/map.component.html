@@ -5,6 +5,12 @@
 <p> your latitude is: {{location.lat}}</p>
 <p> your longitude is: {{location.lng}}</p>
 
+
+<p *ngFor="let locations of markedLocation">
+  {{locations}}
+</p>
+
+
 <!--from google map-->
 <!--<agm-map [latitude]="location.lat" [longitude]="location.lng">-->
 <!--</agm-map>-->
@@ -41,5 +47,4 @@
 
 
 <div class="map match-parent" id="map">
-
 </div>

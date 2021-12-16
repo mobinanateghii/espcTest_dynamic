@@ -3,6 +3,7 @@ import {MapServiceService} from '../_services/map-service.service';
 import * as mapboxgl from 'mapbox-gl';
 import {Constants} from '../_Authentication/Constants';
 import {GeoJSONSource} from 'mapbox-gl';
+import {GeoJson} from './map';
 
 @Component({
   selector: 'app-map',
@@ -14,6 +15,7 @@ export class MapComponent implements OnInit {
   map: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/streets-v11';
   location = {lat: 35.72288 , lng: 51.4245497};
+  markedLocation = [];
 
   constructor(private mapService: MapServiceService) {
   }
@@ -48,8 +50,10 @@ export class MapComponent implements OnInit {
 
     this.map.addControl(new mapboxgl.NavigationControl());
     this.map.on('click' , (event) => {
+      this.markedLocation.push('lng' , event.lngLat.lng);
+      this.markedLocation.push('lat' , event.lngLat.lat);
       const coordinates = [event.lngLat.lng , event.lngLat.lat];
-      const newMarker = new GeoJSONSource(coordinates);
+      const newMarker = new GeoJson(coordinates);
     });
   }
 

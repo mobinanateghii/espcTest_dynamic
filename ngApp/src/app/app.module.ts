@@ -35,6 +35,7 @@ import {PaymentDataService} from './_services/payment-data.service';
 import {AuthGuard} from './_Authentication/auth.guard';
 import {TokenInterceptorService} from './_Authentication/token-interceptor.service';
 import {TokenInterceptor} from './_Authentication/token.interceptor';
+import {MapComponent} from './map/map.component';
 
 
 
@@ -52,6 +53,7 @@ import {TokenInterceptor} from './_Authentication/token.interceptor';
     DialogComponent,
     ErrorsComponent,
     PanelComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,

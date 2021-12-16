@@ -8,6 +8,7 @@ import {HomeComponent} from './home/home.component';
 import {EditPaymentComponent} from './edit-payment/edit-payment.component';
 import {PanelComponent} from './panel/panel.component';
 import {AuthGuard} from './_Authentication/auth.guard';
+import {MapComponent} from './map/map.component';
 
 
 const routes: Routes = [
@@ -16,8 +17,11 @@ const routes: Routes = [
   {path : 'login' , component : LoginComponent},
   {path : 'panel/:id' , component : PanelComponent} ,
   {path : 'ShowPayments' , component : PaymentsComponent} ,
-  {path : 'CreatPayment' , component : CreatPaymentComponent , canActivate: [AuthGuard] } ,
-  {path : 'EditPayments' , component:  EditPaymentComponent , canActivate: [AuthGuard] } ,
+  {path : 'CreatPayment' , component : CreatPaymentComponent  } ,
+  {path : 'EditPayments' , component:  EditPaymentComponent } ,
+  {path : 'map' , component:  MapComponent } ,
+  // {path : 'CreatPayment' , component : CreatPaymentComponent , canActivate: [AuthGuard] } ,
+  // {path : 'EditPayments' , component:  EditPaymentComponent , canActivate: [AuthGuard] } ,
   { path: '**', redirectTo: '/' , pathMatch: 'full'},
 ];
 

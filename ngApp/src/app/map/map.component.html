@@ -1,0 +1,43 @@
+<!--from angular core-->
+<button  mat-raised-button color="accent" style="margin: 1em 0em" (click)="getLocation()">
+  check current location
+</button>
+<p> your latitude is: {{location.lat}}</p>
+<p> your longitude is: {{location.lng}}</p>
+
+<!--from google map-->
+<!--<agm-map [latitude]="location.lat" [longitude]="location.lng">-->
+<!--</agm-map>-->
+
+<!--from map.ir-->
+<!--<div id="container">-->
+<!--  <mgl-map-->
+<!--    [zoom]="[5]"-->
+<!--    [center]="center"-->
+<!--    [centerWithPanTo]="true"-->
+<!--    [interactive]="true"-->
+<!--    [apiKey]="apiKey"-->
+<!--    (click)="clicked($event)"-->
+<!--  >-->
+<!--    <mgl-marker-->
+<!--      [lngLat]="markerPosition"-->
+<!--      [draggable]="true"-->
+<!--      (dragEnd)="dragged($event)"-->
+<!--      anchor="top"-->
+<!--    >-->
+<!--    </mgl-marker>-->
+
+<!--    <mgl-popup-->
+<!--      [lngLat]="markerPosition"-->
+<!--      anchor="bottom"-->
+<!--      offset="10px"-->
+<!--      [closeOnClick]="false"-->
+<!--    >-->
+<!--      <b>Hello world !</b>-->
+<!--    </mgl-popup>-->
+<!--  </mgl-map>-->
+<!--</div>-->
+
+
+
+<!--<div class="map match-parent" id="map"></div>-->

@@ -12,10 +12,10 @@ export class AppComponent implements OnInit{
   constructor(public PayDataService: PaymentDataService) {
   }
   ngOnInit() {
-    this.PayDataService.getPaymentData().subscribe(
-      res => this.PayDataService.ELEMENT_DATA = res,
-      err => console.log(err)
-    );
+    // this.PayDataService.getPaymentData().subscribe(
+    //   res => this.PayDataService.ELEMENT_DATA = res,
+    //   err => console.log(err)
+    // );
   }
 
 

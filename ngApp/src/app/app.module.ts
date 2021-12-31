@@ -36,6 +36,7 @@ import {AuthGuard} from './_Authentication/auth.guard';
 import {TokenInterceptorService} from './_Authentication/token-interceptor.service';
 import {TokenInterceptor} from './_Authentication/token.interceptor';
 import {MapComponent} from './map/map.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 
 
@@ -54,6 +55,7 @@ import {MapComponent} from './map/map.component';
     ErrorsComponent,
     PanelComponent,
     MapComponent,
+    UploadFileComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,8 +78,10 @@ import {MapComponent} from './map/map.component';
     HttpClientModule,
 
   ],
+  // provider => declare services
   providers: [ AuthService , PaymentDataService , AuthGuard ,
     {provide: HTTP_INTERCEPTORS , useClass: TokenInterceptor , multi: true}],
+  // initialized component run
   bootstrap: [AppComponent]
 })
 export class AppModule { }

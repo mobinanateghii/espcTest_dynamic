@@ -9,6 +9,7 @@ import {EditPaymentComponent} from './edit-payment/edit-payment.component';
 import {PanelComponent} from './panel/panel.component';
 import {AuthGuard} from './_Authentication/auth.guard';
 import {MapComponent} from './map/map.component';
+import {UploadFileComponent} from './upload-file/upload-file.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path : 'CreatPayment' , component : CreatPaymentComponent  } ,
   {path : 'EditPayments' , component:  EditPaymentComponent } ,
   {path : 'map' , component:  MapComponent } ,
+  {path : 'uploadFile' , component:  UploadFileComponent } ,
   // {path : 'CreatPayment' , component : CreatPaymentComponent , canActivate: [AuthGuard] } ,
   // {path : 'EditPayments' , component:  EditPaymentComponent , canActivate: [AuthGuard] } ,
   { path: '**', redirectTo: '/' , pathMatch: 'full'},

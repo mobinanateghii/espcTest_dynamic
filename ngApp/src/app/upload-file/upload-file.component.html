@@ -1,0 +1,15 @@
+<!--<form [formGroup]="fileUploader" method="post" action="/" enctype="multipart/form-data">-->
+<!--  <div class="form-group">-->
+<!--    <input type="file" class="form-control-file" accept="*/*" formControlName="file" (change)="uploadFile($event.target)">-->
+
+<!--&lt;!&ndash;    <button type="submit" mat-raised-button color="success" class="float-left">upload</button>&ndash;&gt;-->
+<!--  </div>-->
+<!--</form>-->
+
+
+<div class="form-group">
+  <label for="file">Choose File</label>
+  <input type="file"
+         id="file"
+         (change)="handleFileInput($event.target.files)">
+</div>
